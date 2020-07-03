@@ -1,0 +1,147 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,800;1,500;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+
+/* colors */
+$accent: #81e2e6;
+$main-color: #474747;
+
+.headerNav
+{
+    display: block;
+    //position: absolute;
+    position: absolute;
+    width: 100%;
+    background-color: #e0f1f1;
+    font-family: 'Work Sans', sans-serif;
+    z-index: 999;
+    transition: 900ms ease;
+
+    .logo {
+      margin: 22px 0.5vw 1vh 10vw;
+      font-size: calc(40px);
+      font-weight: 400;
+      letter-spacing: 0px;
+      display: block;
+      position: relative;
+      float: left;
+      transition-timing-function: ease;
+      color: $main-color;
+
+      .subLogo1 {
+        font-weight: 600;
+        //transform: scaleY(-1);
+        //transform: scaleY(-1);
+        display: inline;
+      }
+
+      .subLogo2 {
+        font-weight: 600;
+        //transform: scaleY(-1);
+        transform: scaleX(-1);
+        margin-top: -35px;
+        margin-left: 38px;
+      }
+
+      a:link, a:visited, a:active {
+        text-decoration: none;
+        color: $main-color;
+      }
+
+      span.subLogoCode {
+        font-weight: 500;
+        color: $accent;
+      }
+    }
+
+    .nav {
+      margin: 35px 9vw 1vh 0.5vw;
+      margin-right: calc(10vw-15px);
+      display: block;
+      position: relative;
+      float: right;
+
+      div.navBut, a:link, a:active, a:visited {
+        text-decoration: none;
+        background-color: none;
+        //margin-left: 5px;
+        padding: 10px 15px 10px 15px;
+        text-transform: lowercase;
+        font-size: 16px;
+        letter-spacing: 2px;
+        -webkit-transition-duration: 0.7s;
+        transition-duration: 0.7s;
+        //border-bottom: 2px solid transparent;
+        color: $main-color;
+        display: inline;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $accent;
+        }
+
+      }
+
+      .plus {
+        font-weight: 600;
+        font-size: 15px;
+        font-family: 'Source Code Pro', monospace;
+        letter-spacing: 1px;
+        cursor: pointer;
+        z-index: 999999;
+        //background-color: #fdfdfd;
+      }
+    }
+}
+
+.verticalMenu {
+  top: 58px;
+  right: calc(10vw + 3px);
+  display: flex;
+  flex-direction: column;
+  float: right;
+  z-index: 9999;
+  //background-color: #505050;
+  position: fixed;
+  border-bottom: 5px solid $accent;
+
+  div.navBut, a:link, a:active, a:visited {
+    padding: 10px 25px 10px 25px;
+    text-align: center;
+    text-transform: lowercase;
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+    background-color: #505050;
+    letter-spacing: 2px;
+    -webkit-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+    cursor: pointer;
+
+    &:hover {
+      color: $accent;
+    }
+
+  }
+
+}
+
+.menuEvents-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  .menuEvents-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .menuEvents-exit {
+    opacity: 1;
+  }
+  .menuEvents-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+  }

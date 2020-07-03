@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+.App {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  padding-top: 80px;
+  width: 100vw;
+  height: 50vh;
+  background-color: #e0f1f1;
+  z-index: 1;
+}
+
+.mainApp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //background-color: #ccc;
+  height: 50vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  font-weight: 400;
+  font-size: 10vh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.wave {
+  display: inline-block;
+  position: relative;
+  width: 100vw;
+  padding-bottom: 28%;
+  vertical-align: middle;
+  overflow: hidden;
+  margin-top: -14%;
+}
+
+.bordered {
+  position: relative;
+  height: 75px;
+  width: 100%;
+  border-top: 40px solid #e0f1f1;
+  background: #FFF;
+  padding-top: 10px;
+}
+
+.bordered:before {
+  position: absolute;
+  content: '';
+  top: 0px;
+  height: 8px;
+  width: 100%;
+  background-size: 12px 12px;
+  background-position: -5px -3px;
+  background-image: -webkit-radial-gradient(50% 0%, circle, #e0f1f1 50%, transparent 55%);
+  background-image: -moz-radial-gradient(50% 0%, circle, #e0f1f1 50%, transparent 55%);
+  background-image: radial-gradient(circle at 50% 0%, #e0f1f1 50%, transparent 55%);
+}

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+
+$cardBorder: #dfdfdf;
+$titleBg: #e7e7e7;
+$titleHoverBg: #e0f1f1;
+
+.accordion {
+    display: flex;
+    flex-direction: column;;
+    text-align: left;
+    //border: 1px solid $cardBorder;
+    //border-radius: 15px;
+    margin-bottom: 10px;
+    //background-color: #f7f7f7;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+
+    .acctitle {
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: $titleBg;
+        border: 1px solid $cardBorder;
+        border-bottom: none;
+        //font-family: 'Work Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        transition: 400ms ease;
+        line-height: 20px;
+
+        .viewStatus {
+            display: inline-block;
+            top: 0px;
+            //display: block;
+            width: 3%;
+            font-family: 'Ubuntu Mono', monospace;
+            color: #9b9b9b;
+        }
+
+        &::after {
+            clear: both;
+            display: block;
+        }
+    }
+
+    .accdescription {
+        background-color: #fcfcfc;
+        border-left: 1px solid $cardBorder;
+        border-right: 1px solid $cardBorder;
+        padding: 10px;
+        display: block;
+        transition: 400ms ease;
+        font-size: 12px;
+        //font-family: 'Montserrat', sans-serif;
+        line-height: 19px;
+    }
+    
+    a:link, a:visited, a:active {
+        text-decoration: none;
+        transition: 400ms ease;
+    }
+
+    .additional {
+        border: 5px solid $titleBg;
+        //border-top-width: 2px;
+        font-size: 11px;
+        height: auto;
+        display: block;
+        background-color: #afafaf;
+        padding: 5px;
+        text-align: center;
+        font-family: 'Ubunto Mono', monospace;
+        letter-spacing: 1px;
+        color: #f7f7f7;
+        transition: 400ms ease;
+
+        .date {
+            padding: 7px;
+            width: calc(50% - 14px);
+            float: left;
+            background-color: #e0f1f1;
+        }
+
+        .link {
+            padding: 7px;
+            width: calc(50% - 14px);
+            float: right;
+            background-color: #e0f1f1;
+            text-align: right;
+            //font-size: 12px;
+        }
+    }
+
+    .accinstitution {
+        padding: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: #f7f7f7;
+        border: 1px solid $cardBorder;
+        border-top: none;
+        font-size: 12px;
+        font-family: 'Ubuntu Mono', monospace;
+    }
+}
+
+.additional:hover {
+    background-color: #79b1b1;
+
+}
+
+.accordion:hover {
+    .acctitle {
+        background-color: $titleHoverBg;
+    }
+
+    .additional {
+        //background-color: #79b1b1;
+        color: #f7f7f7;
+        border: 5px solid $titleHoverBg;
+    }
+
+}
+
+// .accordion:hover {
+//     .accdescription {
+//         padding-top: 7px;
+//         padding-bottom: 80px;
+//         margin-bottom: 80px;
+//         height: auto;
+//         display: block;
+//     }
+// }
+

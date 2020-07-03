@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600&display=swap');
+
+.container {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  margin-top: 10px;
+  width: 100vw;
+  //height: 50vh;
+  //background-color: #e0f1f1;
+  z-index: 1;
+
+    .itemspace {
+    display: block;
+    //align-items: flex-start;
+    //justify-content: start;
+    //background-color: #ccc;
+    //height: 50vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    
+        .title {
+            font-weight: 300;
+            font-size: calc(12px + 1vw + 3vh);
+            display: block;
+            position: static;
+            margin-bottom: 5px;
+            float: left;
+            text-align: left;
+            width: 80vw;
+            //font-family: 'Montserrat', sans-serif;
+        }
+
+        .subtitle {
+            font-style: italic;
+            position: static;
+            text-align: left;
+            display: block;
+            margin-top: 8px;
+            color: #929292;
+            //width: 80vw;
+        }
+
+        .filterbox {
+            display: block;
+            position: static;
+            text-align: left;
+            margin-top: 15px;
+            padding-bottom: 20px;
+
+            .searchField {
+                padding: 7px 10px 7px 10px;
+                border-radius: 10px;
+                border: 1px solid #ccc;
+                outline: none;
+                font-family: 'Ubuntu Mono', monospace;
+                font-size: 15px;
+                color: #929292;
+                background-color: #f7f7f7;
+                float: left;
+                display: block;
+                margin-right: 5px;
+                margin-bottom: 3px;
+            }
+
+            button {
+              width: auto;
+              padding: 8px;
+              margin: 0px 1px 3px 2px;
+              border: 1px solid #cccccc;
+              background-color: #f7f7f7;
+              font-family: 'Ubuntu Mono', monospace;
+              outline: none;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background 400ms ease;
+            }
+
+            .buttonSelected {
+              padding-top: 6px;
+              padding-bottom: 7px;
+              background-color: #e0f1f1;
+            }
+
+            .clearFilter {
+              font-family: 'Fredoka One', cursive;
+              margin-left: 5px;
+              color: #0b8f8f;
+            }
+
+            button:hover {
+              background-color: #e0f1f1;
+            }
+
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            position: relative;
+            text-align: left;
+            padding: 10px 0px 10px 0px;
+            margin-bottom: 20px;
+            min-height: auto;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+        }
+
+        .projects::after {
+          clear: both;
+          content: "";
+          display: block;
+        }
+
+    }
+}
+
+.click {
+  z-index: 99999;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    border-left: 5px solid #fdfdfd;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
